@@ -12,6 +12,12 @@ int main(void) {
     scanf("%d", &end);
     printf("Enter increment value: ");
     scanf("%d", &increment);
+    // Input validation
+    if (end < start || increment <= 0) {
+        printf("Invalid input. Ensure that the ending value is greater than or equal to the starting value and that the increment is positive.\n");
+        return 1;  // Exit with an error code
+    }
+    
 
     // Print table header
     printf("\nFahrenheit   Celsius\n");
@@ -22,5 +28,5 @@ int main(void) {
         printf("%10d %10.1f\n", f, celsius);
     }
 
-    return 0;
+Â Â Â Â returnÂ 0;
 }
